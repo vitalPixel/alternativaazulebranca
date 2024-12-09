@@ -8,6 +8,9 @@ body, html {
 
 h1, h2, h3, h4, h5, h6 {
     color: #133269;
+    line-height: 1.2;
+    font-family: "Trebuchet MS", "Roboto", "Liberation Sans", sans-serif;
+    /* font-family: Verdana, sans-serif; */
 }
 
 h1 {
@@ -16,6 +19,10 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+ul {
+    padding-inline-start: 2.5rem;
 }
 
 p, li {
@@ -40,7 +47,7 @@ li::marker {
 
 .left, .right {
     position: relative;
-    width: 20%;
+    flex-basis: clamp(55%, 40%, 40%);
     background-color: #133269;
     background-size: cover;
     background-repeat: no-repeat;
@@ -68,27 +75,29 @@ li::marker {
 }
 
 .center {
-    width: 60%;
+    flex-grow: 1;
     overflow-y: auto;
     background-color: #fff;
-    padding: 20px;
+    max-width: 44rem;
+}
+
+.header {
+    text-align: center;
+    padding-top: 2rem;
 }
 
 .logo {
-    position: relative;
-    margin: 20px;
+    margin: 0;
     padding: 0;
 }
 
 .logo img {
     width: 200px;
-    max-width: 100%;
     height: auto;
 }
 
 .content {
-    padding: 40px;
-    max-width: 44rem;
+    padding: 2rem;
 }
 
 .quote {
@@ -111,4 +120,10 @@ li::marker {
 
 .footer p {
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
 }
