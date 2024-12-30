@@ -88,7 +88,7 @@ li::marker {
 .header {
     position: sticky;
     top: 0;
-    min-height: 100px;
+    height: clamp(66px, calc(100px - 2vw), 100px);
     text-align: center;
     margin-top: 2rem;
     background-image: url('/imgs/aab__header.jpg');
