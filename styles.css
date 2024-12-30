@@ -88,13 +88,20 @@ li::marker {
 .header {
     position: sticky;
     top: 0;
+    margin-top: 2rem;
+}
+
+.header__backg {
     height: clamp(66px, calc(100px - 2vw), 100px);
     text-align: center;
-    margin-top: 2rem;
     background-image: url('/imgs/aab__header.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.newsletter__modal {
+    display: none;
 }
 
 .content {

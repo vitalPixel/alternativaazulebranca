@@ -6,13 +6,39 @@
     <title>Alternativa Azul e Branca</title>
 
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <main class="container">
         <aside class="left"></aside>
 
         <section class="center">
-            <header class="header"></header>
+            <header class="header">
+                <div class="header__backg"></div>
+                <div class="header__newsleter">
+                    <form name="newsletter" method="POST" netlify class="newsletter__form">
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
+                        </div>
+                        <input type="hidden" name="socio" id="socioInput">
+                        <button type="button" onclick="openModal()">Subscrever newsletter</button>
+                    </form>
+                    
+                    <div class="newsletter__modal" id="newsModal">
+                        <p>Sou sócio do F.C. Porto:</p>
+                        <label>
+                            <input type="radio" name="socio" value="sim" onchange="updateSocioValue(this.value)" required>
+                            Sim
+                        </label>
+                        <label>
+                            <input type="radio" name="socio" value="nao" onchange="updateSocioValue(this.value)" required>
+                            Não
+                        </label>
+                        <button onclick="submitForm()">Confirmar</button>
+                    </div>
+                </div>
+            </header>
 
             <div class="content">
                 <h1 itemprop="headline">Manifesto</h1>
