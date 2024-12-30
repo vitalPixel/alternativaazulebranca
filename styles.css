@@ -1,3 +1,7 @@
+html {
+    font-size: 15px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -10,11 +14,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #133269;
     line-height: 1.2;
     font-family: "Trebuchet MS", "Roboto", "Liberation Sans", sans-serif;
-    /* font-family: Verdana, sans-serif; */
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 h2 {
@@ -83,18 +86,15 @@ li::marker {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    min-height: 100px;
     text-align: center;
-    padding-top: 2rem;
-}
-
-.logo {
-    margin: 0;
-    padding: 0;
-}
-
-.logo img {
-    width: 200px;
-    height: auto;
+    margin-top: 2rem;
+    background-image: url('/imgs/aab__header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .content {
