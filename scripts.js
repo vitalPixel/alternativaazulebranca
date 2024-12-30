@@ -2,10 +2,18 @@ const newsModal = document.getElementById('newsModal');
 const socioInput = document.getElementById('socioInput');
 const emailInput = document.getElementById('email');
 
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
 function openModal() {
     emailValue = emailInput.value;
     if (!emailValue) {
         alert('Preenche o campo de email, por favor');
+        return;
+    } else if (!validateEmail(emailValue)) {
+        alert('Email inválido');
         return;
     }
     console.log(emailValue)
