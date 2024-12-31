@@ -15,14 +15,14 @@
         <section class="center">
             <header class="header">
                 <div class="header__backg"></div>
-                <div class="header__newsleter">
-                    <form name="newsletter" method="POST" class="newsletter__form" data-netlify="true">
-                        <div>
+                <div class="header__newsletter">
+                    <form class="newsletter__form" name="newsletter" method="POST" data-netlify="true">
+                        <div class="newsletter__formGroup">
                             <label for="email">E-mail:</label>
                             <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
                         </div>
                         <input type="hidden" name="socio" id="socioInput">
-                        <button type="button" onclick="openModal()">Subscrever newsletter</button>
+                        <button class="newsletter__form__btn" type="button" onclick="openModal()">subscrever newsletter</button>
                     </form>
                     
                     <div class="newsletter__modal" id="newsModal">

@@ -100,6 +100,42 @@ li::marker {
     background-repeat: no-repeat;
 }
 
+.header__newsletter {
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 2px solid rgba(19, 50, 105, 1);
+}
+
+.newsletter__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.newsletter__formGroup {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: .5rem;
+    color: #133269;
+}
+
+.newsletter__formGroup label {
+    margin-right: 0.3rem;
+}
+
+.newsletter__form__btn {
+    min-width: 80px;
+    min-height: 48px;
+    margin: 0 0.5rem;
+    padding: 0.6rem;
+    border: none;
+    cursor: pointer;
+    font-variant: small-caps;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #133269;
+}
+
 .newsletter__modal {
     display: none;
 }
