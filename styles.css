@@ -1,19 +1,30 @@
+:root {
+    --color-primary: #133269;
+    --color-secondary: #EFF2F8;
+    --color-action: #377EC0;
+    --color-white: #fff;
+    --color-overlay-primary: rgba(19, 50, 105, 0.85);
+    --color-overlay-secondary: rgba(55, 126, 193, 0.81);
+    --font-sans: "Trebuchet MS", "Roboto", "Liberation Sans", sans-serif;
+    --font-serif: Georgia, 'Times New Roman', Times, serif;
+}
+
 html {
-    font-size: 15px;
+font-size: 15px;
 }
 
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font-serif);
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #133269;
+    color: var(--color-primary);
     line-height: 1.2;
-    font-family: "Trebuchet MS", "Roboto", "Liberation Sans", sans-serif;
+    font-family: var(--font-sans);
 }
 
 h1 {
@@ -37,7 +48,32 @@ li {
 }
 
 li::marker {
-    color: #133269;
+    color: var(--color-primary);
+}
+
+button {
+    min-width: 80px;
+    min-height: 48px;
+    margin: 0 0.5rem;
+    padding: 0.6rem;
+    border: none;
+    cursor: pointer;
+    font-variant: small-caps;
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+    background-color: var(--color-action);
+}
+
+label {
+    font-family: var(--font-sans);
+}
+
+.button--secondary {
+    color: var(--color-action);
+    font-size: 1.2rem;
+    font-variant: normal;
+    text-decoration: underline;
+    background-color: transparent;
 }
 
 .container {
@@ -52,7 +88,7 @@ li::marker {
     position: relative;
     flex-basis: clamp(10%, 20%, 30%);
     flex-grow: 1;
-    background-color: #133269;
+    background-color: var(--color-primary);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -74,13 +110,13 @@ li::marker {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(19, 50, 105, 0.85);
+    background-color: var(--color-overlay-primary);
 }
 
 .center {
     flex-grow: 1;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: var(--color-white);
     max-width: 44rem;
     min-width: 22rem;
 }
@@ -101,43 +137,72 @@ li::marker {
 }
 
 .header__newsletter {
-    padding: 1rem;
-    background-color: #fff;
-    border-bottom: 2px solid rgba(19, 50, 105, 1);
+    text-align: center;
+    border-bottom: 2px solid var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+.newsletter__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    color: var(--color-secondary);
+    outline: solid 3px var(--color-secondary);
+    outline-offset: -12px;
+    cursor: initial;
+    background-color: var(--color-primary);
+}
+
+.newsletter__content h2 {
+    max-width: 460px;
+    color: var(--color-secondary);
+}
+
+.newsletter__close {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
 .newsletter__form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .newsletter__formGroup {
-    display: flex;
-    flex-wrap: nowrap;
-    margin: .5rem;
-    color: #133269;
+    margin: 1rem;
 }
 
 .newsletter__formGroup label {
     margin-right: 0.3rem;
 }
 
-.newsletter__form__btn {
-    min-width: 80px;
-    min-height: 48px;
-    margin: 0 0.5rem;
-    padding: 0.6rem;
-    border: none;
-    cursor: pointer;
-    font-variant: small-caps;
-    font-size: 0.9rem;
-    color: #fff;
-    background-color: #133269;
+.newsletter__formGroup p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-sans);
+}
+
+.newsletter__privacy {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .newsletter__modal {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: var(--color-overlay-secondary);
 }
 
 .content {
@@ -145,7 +210,7 @@ li::marker {
 }
 
 .quote {
-    color: #133269;
+    color: var(--color-primary);
 }
 
 .publishing {
@@ -158,7 +223,7 @@ li::marker {
 
 .footer {
     text-align: center;
-    color: #133269;
+    color: var(--color-primary);
     margin-top: 30px;
 }
 

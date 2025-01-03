@@ -16,27 +16,7 @@
             <header class="header">
                 <div class="header__backg"></div>
                 <div class="header__newsletter">
-                    <form class="newsletter__form" name="newsletter" method="POST" data-netlify="true">
-                        <div class="newsletter__formGroup">
-                            <label for="email">E-mail:</label>
-                            <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
-                        </div>
-                        <input type="hidden" name="socio" id="socioInput">
-                        <button class="newsletter__form__btn" type="button" onclick="openModal()">subscrever newsletter</button>
-                    </form>
-                    
-                    <div class="newsletter__modal" id="newsModal">
-                        <p>Sou sócio do F.C. Porto:</p>
-                        <label>
-                            <input type="radio" name="socio" value="sim" onchange="updateSocioValue(this.value)" required>
-                            Sim
-                        </label>
-                        <label>
-                            <input type="radio" name="socio" value="nao" onchange="updateSocioValue(this.value)" required>
-                            Não
-                        </label>
-                        <button onclick="submitForm()">Confirmar</button>
-                    </div>
+                    <button class="button--secondary" type="button" onclick="openModal()">Subscreve a nossa newsletter!</button>
                 </div>
             </header>
 
@@ -91,5 +71,34 @@
         <aside class="right"></aside>
 
     </main>
+
+    <div class="newsletter__modal" id="newsModal">
+        <div class="newsletter__content">
+            <button class="newsletter__close" onclick="closeModal()">&times;</button>
+            <h2>Subscreve a nossa newsletter!</h2>
+            <p>Fica a par de todos os eventos, acções, e novidades da Alternativa Azul&nbsp;e&nbsp;Branca.</p>
+            <form class="newsletter__form" name="newsletter" method="POST" data-netlify="true">
+                <div class="newsletter__formGroup">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
+                </div>
+    
+                <div class="newsletter__formGroup">
+                    <p>Sou sócio do F.C. Porto:</p>
+                    <label>
+                        <input type="radio" name="socio" value="sim" required>
+                        Sim
+                    </label>
+                    <label>
+                        <input type="radio" name="socio" value="nao" required>
+                        Não
+                    </label>
+                </div>
+                <button class="newsletter__form__button" type="submit">subscrever</button>
+                <p class="newsletter__privacy">Nunca enviaremos spam <br>e <strong>nunca forneceremos os teus dados a terceiros</strong>!</p>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
