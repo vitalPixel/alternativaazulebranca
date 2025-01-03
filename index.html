@@ -77,10 +77,18 @@
             <button class="newsletter__close" onclick="closeModal()">&times;</button>
             <h2>Subscreve a nossa newsletter!</h2>
             <p>Fica a par de todos os eventos, acções, e novidades da Alternativa Azul&nbsp;e&nbsp;Branca.</p>
-            <form class="newsletter__form" name="newsletter" method="POST" data-netlify="true">
+            <form
+                class="newsletter__form"
+                name="newsletter"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="special-message">
                 <div class="newsletter__formGroup">
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
+                    <label class="hidden" for="special-message">
+                        This is a special message field: <input name="special-message" />
+                    </label>
                 </div>
     
                 <div class="newsletter__formGroup">

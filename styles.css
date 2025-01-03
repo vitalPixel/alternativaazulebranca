@@ -68,6 +68,10 @@ label {
     font-family: var(--font-sans);
 }
 
+.hidden {
+    display: none;
+}
+
 .button--secondary {
     color: var(--color-action);
     font-size: 1.2rem;
