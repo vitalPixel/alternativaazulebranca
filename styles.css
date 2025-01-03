@@ -4,7 +4,7 @@
     --color-action: #377EC0;
     --color-white: #fff;
     --color-overlay-primary: rgba(19, 50, 105, 0.85);
-    --color-overlay-secondary: rgba(55, 126, 193, 0.81);
+    --color-overlay-secondary: rgba(22, 48, 73, 0.81);
     --font-sans: "Trebuchet MS", "Roboto", "Liberation Sans", sans-serif;
     --font-serif: Georgia, 'Times New Roman', Times, serif;
 }
@@ -143,11 +143,12 @@ label {
 }
 
 .newsletter__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 2rem;
     justify-content: center;
+    padding: 2rem;
     color: var(--color-secondary);
     outline: solid 3px var(--color-secondary);
     outline-offset: -12px;
@@ -161,11 +162,14 @@ label {
 }
 
 .newsletter__close {
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
-    padding: 0.5rem;
+    width: 48px;
+    padding: 1.1rem 0.5rem;
+    font-size: 2.5rem;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .newsletter__form {
