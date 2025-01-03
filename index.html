@@ -82,7 +82,8 @@
                 name="newsletter"
                 method="POST"
                 data-netlify="true"
-                netlify-honeypot="special-message">
+                netlify-honeypot="special-message"
+                data-netlify-recaptcha="true">
                 <div class="newsletter__formGroup">
                     <label for="email">E-mail:</label>
                     <input type="email" name="email" id="email" placeholder="ex. nome@exemplo.com" required>
@@ -101,6 +102,12 @@
                         <input type="radio" name="socio" value="nao" required>
                         Não
                     </label>
+                </div>
+                <div class="newsletter__recaptcha newsletter__formGroup">
+                    <label id="recaptcha__label">Confirma que não és um robot por favor:</label>
+                    <div
+                    data-netlify-recaptcha="true"
+                    aria-labelledby="recaptcha__label"></div>
                 </div>
                 <button class="newsletter__form__button" type="submit">subscrever</button>
                 <p class="newsletter__privacy">Nunca enviaremos spam <br>e <strong>nunca forneceremos os teus dados a terceiros</strong>!</p>
